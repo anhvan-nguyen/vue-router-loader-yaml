@@ -68,7 +68,8 @@ const setLazy = function (lazy,result,componentName, component, chunkName) {
         }
     } else {
         if (result.header.indexOf(`const ${componentName} = `) == -1) {
-            result.header += `\nconst ${componentName} = r=>require.ensure([],()=>r(require('${component}')),'${chunkName}');`;
+            // result.header += `\nconst ${componentName} = r=>require.ensure([],()=>r(require('${component}')),'${chunkName}');`;
+            result.header += `\nconst ${componentName} = () => import('${component}');`;
         }
     }
     return result;

@@ -4,7 +4,8 @@
   "description": "load vue-router config via yaml file",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test:vue": "node ./router/index.js"
   },
   "repository": {
     "type": "git",
